@@ -1,0 +1,22 @@
+#+title: csl-mode
+
+An Emacs major mode for the Citation Style Language.
+
+The ~csl-mode~ derives from ~nxml-mode~, an XML editing mode. Currently, the ~csl-mode~ implements the following feature:
+
+  - ~imenu~ for easier navigation
+
+* How to Use
+
+Download and install the package ~cs-mode~ from GitHub:
+
+#+begin_src elisp
+  (use-package csl-mode
+    :vc ( :url "https://github.com/okomestudio/emacs-csl-mode"
+          :rev :newest )
+    :mode ("\\.csl\\'" . csl-mode))
+#+end_src
+
+Visit a CSL file (with =.csl= as the file extension) and the major mode should activate automatically.
+
+Use ~imenu~ or a fancier equivalent, e.g., ~consult-imenu~, to jump between relevant nodes.
